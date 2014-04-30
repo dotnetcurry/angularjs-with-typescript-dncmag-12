@@ -8,4 +8,4 @@ Create Single Page Applications (SPA) using AngularJS and TypeScript. This code 
 * Date: May 1, 2014
 * Version: 0.0.1
 * Website: [DNC Magazine](http://www.dncmagazine.com)
-* GitHub: [DNC Magazine on Github](https://github.com/dotnetcurry/wpf-data-binding-features-dncmag-11)
+* GitHub: [DNC Magazine on Github](https://github.com/dotnetcurry/angularjs-with-typescript-dncmag-12)
