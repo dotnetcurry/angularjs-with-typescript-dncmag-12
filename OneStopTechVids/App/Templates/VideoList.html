@@ -1,0 +1,11 @@
+﻿<div class="col-md-4 rowmargin" ng-repeat="video in videos">
+    <div class="thumbnail" title="{{video.description}}">
+        <div class="caption"><strong>{{video.title}}</strong></div>
+        <button class="right glyphicon glyphicon-chevron-up voting-button" ng-disabled="video.rating == 5" ng-click="upRate(video.id, video.rating)"></button>
+        <div style="text-align:center;">by {{video.author}}</div>
+        <span class="right" style="margin-right: 9px;">{{video.rating}}</span>
+        <button class="right glyphicon glyphicon-chevron-down voting-button" ng-disabled="video.rating == 1" ng-click="downRate(video.id, video.rating)"></button>
+        <br />
+        <div><a href="#/edit/{{video.id}}">Edit / Delete</a></div>
+    </div>
+</div>

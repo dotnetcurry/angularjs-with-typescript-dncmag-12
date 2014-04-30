@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>One stop technology video training site</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Styles.css" rel="stylesheet" />
+</head>
+<body ng-app="techVidsApp">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:darkslategray;">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/TechVids.html" class="navbar-brand">
+                    One Stop Technology Training
+                    <h6>Ultimate resource to stay current with technology!</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container" style="margin-top:10px;">
+            <div class="col-md-3" ng-controller="TechVidsCategoryCtrl">
+                <ul class="list-unstyled" style="font-size:14px;">
+                    <li><a href="#/add" style="color:blue; font-weight:bold;">Add New Video</a></li>
+                    <li ng-repeat="category in categories"><a href="#/list/{{category.id}}">{{category.name}}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" ng-view>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/techVidsApp.js"></script>
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h2 class="navbar-brand">One Stop Technology Training</h2>
+                <h6 class="tag">-Ultimate training that keeps you updated!</h6>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container">
+            <div class="col-md-3">
+                <ul class="list-unstyled">
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                    <li><a href="#">Link4</a></li>
+                    <li><a href="#">Link5</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                Some content here
+            </div>
+        </div>
+    </section>
+
+    <footer class="container text-center"><p>© 2013 OneStopTech Training Ltd.</p></footer>-->
+</body>
+</html>

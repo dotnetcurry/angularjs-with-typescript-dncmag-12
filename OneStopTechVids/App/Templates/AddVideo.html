@@ -1,0 +1,39 @@
+﻿<form name="techVidForm" novalidate>
+    <div class="form-group">
+        <label for="title">Title</label><br />
+        <input type="text" name="title" ng-model="video.title" required="" unique-video-title />
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label><br />
+        <select name="category" ng-model="category" ng-options="cat.name for cat in categories" required=""></select>
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label><br />
+        <input type="text" name="author" ng-model="video.author" required="" ng-pattern="name" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label><br />
+        <textarea ng-model="video.description" name="description" required="" ng-minlength="50" ng-maxlength="200"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="button" name="edit" value="Add" class="btn btn-default" ng-click="addVideo()" ng-disabled="techVidForm.$invalid" />
+        <input type="button" name="delete" value="Cancel" class="btn btn-danger" ng-click="cancelVideo()" />
+    </div>
+</form>
+<div style="color:red;">
+    <div ng-show="techVidForm.title.$dirty && techVidForm.title.$invalid">
+        <span ng-show="techVidForm.title.$error.required">Please enter a title for the video</span>
+        <span ng-show="techVidForm.title.$error.uniqueVideoTitle">Title already used</span>
+    </div>
+    <div ng-show="techVidForm.category.$dirty && techVidForm.category.$invalid">
+        <span ng-show="techVidForm.category.$error.required">Please select a category</span>
+    </div>
+    <div ng-show="techVidForm.author.$dirty && techVidForm.author.$invalid">
+        <span ng-show="techVidForm.author.$error.required">Please enter name of the author</span>
+        <span ng-show="techVidForm.author.$error.pattern">Author's name cannot contain numbers or special characters</span>
+    </div>
+    <div ng-show="techVidForm.description.$dirty && techVidForm.description.$invalid">
+        <span ng-show="techVidForm.description.$error.required">Please enter a description for the video</span>
+        <span ng-show="techVidForm.description.$error.minlength || techVidForm.description.$error.maxlength">Description should have 50 - 200 characters</span>
+    </div>
+</div>

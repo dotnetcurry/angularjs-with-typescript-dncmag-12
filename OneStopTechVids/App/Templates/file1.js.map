@@ -1,0 +1,1 @@
+{"version":3,"file":"file1.js","sourceRoot":"","sources":["file1.ts"],"names":["Square","Square.constructor","Square.findArea"],"mappings":"AAAA;IAEIA,gBAAYA,UAAkBA;QAC1BC,IAAIA,CAACA,UAAUA,GAAGA,UAAUA;IAChCA,CAACA;IAEDD,4BAAAA;QACIE,OAAOA,IAAIA,CAACA,UAAUA,GAAGA,IAAIA,CAACA,UAAUA;IAC5CA,CAACA;IACLF,cAACA;AAADA,CAACA,IAAA"}
